@@ -6,12 +6,12 @@
 	margin-left: auto;
 	margin-right: auto;
 }
-.bc-logo {
+.bc-logo-bg {
 	padding: 1.2px;
-	background-color: #CCCCCC;
 	height: 90px;
 	text-align: center;
 	vertical-align: middle;
+	background-image: url('../img/bc-logo-bg.png');
 }
 .icon-and-title {
 	text-align: left;
