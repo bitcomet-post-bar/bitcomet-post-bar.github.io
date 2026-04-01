@@ -27,10 +27,9 @@ a:hover {
 
 .div-inline-block {
 	display: inline-block;
-	margin-right: 2px;
+	margin-left: 4px;
 }
 .icon {
 	vertical-align: middle;
-	margin-right: 2px;
-	margin-left: 4px;
+	margin-right: 4px;
 }
