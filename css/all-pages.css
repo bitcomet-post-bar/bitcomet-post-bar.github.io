@@ -25,12 +25,12 @@ a:hover {
 	padding-top: 5pt;
 }
 
-.ssl-link {
+.div-inline-block {
 	display: inline-block;
-
+	margin-right: 2px;
 }
-
-.ssl-icon {
+.icon {
 	vertical-align: middle;
-	margin-right: 1px;
+	margin-right: 2px;
+	margin-left: 2px;
 }
