@@ -17,3 +17,20 @@ a:hover {
     text-decoration: underline;
 }
 
+.text {
+	text-align: left;
+	font-family: "Microsoft YaHei", sans-serif;
+	font-size: 9pt;
+	text-indent: 24pt;
+	padding-top: 5pt;
+}
+
+.ssl-link {
+	display: inline-block;
+
+}
+
+.ssl-icon {
+	vertical-align: middle;
+	margin-right: 1px;
+}
