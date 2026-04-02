@@ -1,22 +1,44 @@
-﻿/* 表格交错背景 */
-/* sharepoint 2007的内置预览无法显示 但不会报错 外部浏览器显示正常 */
-/* 给偶数行设置背景色 */
-tr:nth-child(even) {
+﻿/* 奇数行颜色 */
+.tr-odd {
     background-color: #F6F6F6;
 }
-/* 给奇数行设置背景颜色 */
-tr:nth-child(odd) {
+
+/* 偶数行颜色 */
+.tr-even {
     background-color: #D9D9D9;
 }
+
 /* 鼠标经过时背景变色，增加易读性 */
 /* 变色排除第一行 */
-tr:hover:not(.table-header-custom) {
+tr:hover {
     
-	background-color:#2E6BC6; 
+	background-color:#2E6BC6;
+ 	color: white
 }
-/* 选中变成白色 */
-/* 排除选中返回主页链接 */
-tr:hover a:not([href$="index.htm"]) {
+
+/* 2. 局部覆盖：针对表头行，强制恢复背景色，取消变色效果 */
+tr.table-header-custom:hover {
+    background-color: #D9D9D9; /* 恢复你原本的表头颜色 */
+    color: black;
+}
+
+/* 2. 【核心修正】针对主页链接，定义 hover 时的特殊状态 */
+/* 我们不使用 !important，而是通过增加选择器的长度（权重）来胜出 */
+
+/* 未访问的主页链接：保持蓝色 */
+tr:hover .home-page-link a:link,
+tr:hover a[href$="index.htm"]:link {
+    color: #0000EE !important; 
+}
+
+/* 已访问的主页链接：保持紫色 */
+tr:hover .home-page-link a:visited,
+tr:hover a[href$="index.htm"]:visited {
+    color: #551A8B !important; 
+}
+
+/* 选中链接文字变成白色 */
+tr:hover a {
     color: white;
 }
 
@@ -146,4 +168,7 @@ a:visited {
 	border-bottom-width: 1pt;
 	border-bottom-color: black;
 	text-align: left;
+}
+.newStyle1 {
+	color: #FFFFFF;
 }
