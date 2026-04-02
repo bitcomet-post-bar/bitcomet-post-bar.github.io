@@ -19,6 +19,7 @@ tr:hover:not(.table-header-custom) {
 tr:hover a:not([href$="index.htm"]) {
     color: white;
 }
+
 /* 去除表格边框 */
 table {
 	border: none;
@@ -71,11 +72,15 @@ tr {
 /* 页面标题 */
 .page-title {
 	padding-left: 2pt;
+	padding-right:2pt;
 	text-align: left;
 	font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
 	font-size: 18pt;
 	font-weight: bold;
 	display: inline-block;
+	*display: inline;      /* IE6/7 */
+    *zoom: 1;              /* 触发IE6/7的Layout */
+
 }
 /* --- 返回主页链接样式 --- */
 .home-page-link {
@@ -101,7 +106,10 @@ a:visited {
 }
 /* --- 图片和文字对齐 --- */
 .img-icon {
-	vertical-align: -10pt;
+	vertical-align: -12px;
+	/* 针对 IE6 的特殊修正（如果 IE6 偏移量不同） */
+    _vertical-align: -10px;
+	
 }
 /* 设置表格距离顶部元素位置 */
 .table-custom {
