@@ -1,10 +1,18 @@
-﻿.backbone {
+﻿
+.main-page-body {
+	background-color: #F6F6F6;
+	font-family: "Microsoft YaHei", "SimSun", sans-serif;
+	text-align: center;  /* 在 IE5 中，这会错误地让块级元素也居中 */
+}
+
+.backbone {
 	width: 60%;
 	height: 100%;
 	position: static;
 	margin-top: 18px;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: left;    /* 必须加这一行！否则内部的文字也会跟着居中 */
 }
 .bc-logo-bg {
 	padding: 1.2px;
@@ -15,14 +23,14 @@
 }
 .icon-and-title {
 	text-align: left;
-	font-family: "Microsoft YaHei", sans-serif;
+	/*font-family: "Microsoft YaHei", sans-serif;*/
 	font-size: 18pt;
 	font-weight: bold;
 	padding-top: 5pt;
 }
 
 .title2 {
-	font-family: "Microsoft YaHei", sans-serif;
+	/*font-family: "Microsoft YaHei", sans-serif;*/
 	font-size: 12pt;
 	text-align: left;
 	font-weight: bold;
@@ -46,17 +54,17 @@
 	padding-bottom: 10pt;
 }
 .txt2 {
-	font-family: Verdana;
+	font-family: Verdana, Geneva;
 	font-size: 18pt;
 	color: #FF6600;
 }
 .txt-sbt-1 {
-	font-family: Verdana;
+	font-family: Verdana, Geneva;
 	font-size: 18pt;
 	color: #3131FF;
 }
 .txt-sbt-2 {
-	font-family: Verdana, Geneva, sans-serif;
+	font-family: Verdana, Geneva;
 	font-size: 18pt;
 	color: #007D00;
 }

@@ -26,16 +26,22 @@ tr.table-header-custom:hover {
 /* 我们不使用 !important，而是通过增加选择器的长度（权重）来胜出 */
 
 /* 未访问的主页链接：保持蓝色 */
-tr:hover .home-page-link a:link,
 tr:hover a[href$="index.htm"]:link {
-    color: #0000EE !important; 
+    color: #0000EE ; 
+}
+/* 已访问的主页链接：保持紫色 */
+tr:hover a[href$="index.htm"]:visited {
+    color: #551A8B ; 
+}
+/* 未访问的ssl链接：保持蓝色 */
+tr:hover a[href$="?ssl=true"]:link {
+    color: #0000EE ; 
+}
+/* 已访问的ssl链接：保持紫色 */
+tr:hover a[href$="?ssl=true"]:visited {
+    color: #551A8B ; 
 }
 
-/* 已访问的主页链接：保持紫色 */
-tr:hover .home-page-link a:visited,
-tr:hover a[href$="index.htm"]:visited {
-    color: #551A8B !important; 
-}
 
 /* 选中链接文字变成白色 */
 tr:hover a {
@@ -96,18 +102,14 @@ tr {
 	padding-left: 2pt;
 	padding-right:2pt;
 	text-align: left;
-	font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+	/*font-family: "Microsoft YaHei", "微软雅黑", sans-serif;*/
 	font-size: 18pt;
 	font-weight: bold;
-	display: inline-block;
-	*display: inline;      /* IE6/7 */
-    *zoom: 1;              /* 触发IE6/7的Layout */
-
 }
 /* --- 返回主页链接样式 --- */
 .home-page-link {
 	text-align: left;
-	font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+	/*font-family: "Microsoft YaHei", "微软雅黑", sans-serif;*/
 	font-size: 12pt;
 	font-weight: bold;
 	padding-left: 2pt;
@@ -128,10 +130,8 @@ a:visited {
 }
 /* --- 图片和文字对齐 --- */
 .img-icon {
-	vertical-align: -12px;
+	vertical-align: middle;
 	/* 针对 IE6 的特殊修正（如果 IE6 偏移量不同） */
-    _vertical-align: -10px;
-	
 }
 /* 设置表格距离顶部元素位置 */
 .table-custom {
@@ -169,6 +169,26 @@ a:visited {
 	border-bottom-color: black;
 	text-align: left;
 }
-.newStyle1 {
-	color: #FFFFFF;
+.versions-title {
+	/* 对应 border="0" */
+    border: none;
+    border-width: 0;
+
+    /* 对应 cellspacing="0" */
+    /* 这是最关键的一行，消除单元格之间的物理间隙 */
+    border-collapse: collapse; 
+    border-spacing: 0;
+}
+
+/* 标题恢复颜色 */
+tr.versions-title-tr:hover {
+    background-color: #F6F6F6;
+    color: black;
+}
+.versions-title-tr {
+}
+
+.versions-title-name-td {
+	vertical-align: middle;
+	padding-left: 2pt;
 }
